@@ -145,7 +145,19 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
 							</ul>
 							<div className="d-flex align-items-center gap-1">
 								
-								
+								<a
+  onClick={handleMobileMenu}
+  className="menu-tigger btn-navbar rounded-circle px-2 ms-4 d-flex align-items-center justify-content-center btn-menu mobile-menu-btn"
+  role="button"
+  aria-label="Open menu"
+>
+  <svg width={30} height={24} viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line y1={12} x2={30} y2={12} stroke="white" strokeWidth={3} />
+    <path d="M5 22H30" stroke="white" strokeWidth={3} />
+    <path d="M10 2H30" stroke="white" strokeWidth={3} />
+  </svg>
+</a>
+
 <div className="d-flex align-items-center gap-1">
   <div className="button-bg btn">
     <button>Get Started</button>

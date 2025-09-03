@@ -21,13 +21,13 @@ export default function Offcanvas({ isMobileMenu, handleMobileMenu }: any) {
 					</button>
 				</div>
 				<div className="offCanvas__logo mb-20">
-					<Link href="/"><img src="/assets/imgs/template/logo3.svg" alt="Logo" /></Link>
+					<Link href="/"><img src="/assets/imgs/template/dark-logo.png" alt="Logo" /></Link>
 				</div>
 				<div className="offCanvas__side-info mb-30">
 					<ul className="navbar-nav navbar-nav-mobile">
-						<li className="nav-item dropdown menu-item-has-children">
-							<a className="nav-link fw-medium" onClick={() => handleAccordion(1)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-							<ul className={`dropdown-menu ${isAccordion === 1 ? "show" : ""}`}>
+						<li className="nav-item ">
+							<a href="/" className="nav-link fw-medium" onClick={() => handleAccordion(1)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+							{/* <ul className={`dropdown-menu ${isAccordion === 1 ? "show" : ""}`}>
 								<li><Link className="dropdown-item" href="/">Home page 1</Link></li>
 								<li><Link className="dropdown-item" href="/index-2">Home page 2</Link></li>
 								<li><Link className="dropdown-item" href="/index-3">Home page 3</Link></li>
@@ -44,20 +44,20 @@ export default function Offcanvas({ isMobileMenu, handleMobileMenu }: any) {
 								<li><Link className="dropdown-item" href="/index-14">Home page 14</Link></li>
 								<li><Link className="dropdown-item" href="/index-15">Home page 15</Link></li>
 								<li><Link className="dropdown-item" href="/index-16">Home page 16</Link></li>
-							</ul>
+							</ul> */}
 						</li>
-						<li className="nav-item dropdown menu-item-has-children">
-							<a className="nav-link fw-medium" onClick={() => handleAccordion(2)} role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-							<ul className={`dropdown-menu ${isAccordion === 2 ? "show" : ""}`}>
+						<li className="nav-item ">
+							<a href="/about-us" className="nav-link fw-medium" onClick={() => handleAccordion(2)} role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+							{/* <ul className={`dropdown-menu ${isAccordion === 2 ? "show" : ""}`}>
 								<li><Link className="dropdown-item" href="/about-us">About Us</Link></li>
 								<li><Link className="dropdown-item" href="/about-us-2">About Us 2</Link></li>
 								<li><Link className="dropdown-item" href="/about-us-3">About Us 3</Link></li>
 								<li><Link className="dropdown-item" href="/about-us-4">About Us 4</Link></li>
-							</ul>
+							</ul> */}
 						</li>
-						<li className="nav-item dropdown menu-item-has-children">
-							<a className="nav-link fw-medium" onClick={() => handleAccordion(3)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-							<ul className={`dropdown-menu ${isAccordion === 3 ? "show" : ""}`}>
+						<li className="nav-item ">
+							<a href="/services" className="nav-link fw-medium" onClick={() => handleAccordion(3)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+							{/* <ul className={`dropdown-menu ${isAccordion === 3 ? "show" : ""}`}>
 								<li><Link className="dropdown-item" href="/services">Services 01</Link></li>
 								<li><Link className="dropdown-item" href="/services-2">Services 02</Link></li>
 								<li><Link className="dropdown-item" href="/services-3">Services 03</Link></li>
@@ -66,37 +66,37 @@ export default function Offcanvas({ isMobileMenu, handleMobileMenu }: any) {
 								<li><Link className="dropdown-item" href="/service-detail-2">Service Details 02</Link></li>
 								<li><Link className="dropdown-item" href="/service-detail-3">Service Details 03</Link></li>
 								<li><Link className="dropdown-item" href="/service-detail-4">Service Details 04</Link></li>
-							</ul>
+							</ul> */}
 						</li>
-						<li className="nav-item dropdown menu-item-has-children">
-							<a className="nav-link fw-medium" onClick={() => handleAccordion(4)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
-							<ul className={`dropdown-menu ${isAccordion === 4 ? "show" : ""}`}>
+						<li className="nav-item ">
+							<a href="/services" className="nav-link fw-medium" onClick={() => handleAccordion(4)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+							{/* <ul className={`dropdown-menu ${isAccordion === 4 ? "show" : ""}`}>
 								<li><Link className="dropdown-item" href="/services">Project List</Link></li>
 								<li><Link className="dropdown-item" href="/services-2">Project Detail</Link></li>
-							</ul>
+							</ul> */}
 						</li>
-						<li className="nav-item dropdown menu-item-has-children">
-							<a className="nav-link fw-medium" onClick={() => handleAccordion(5)} role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a>
-							<ul className={`dropdown-menu ${isAccordion === 5 ? "show" : ""}`}>
+						{/* <li className="nav-item ">
+							<a className="nav-link fw-medium" onClick={() => handleAccordion(5)} role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a> */}
+							{/* <ul className={`dropdown-menu ${isAccordion === 5 ? "show" : ""}`}>
 								<li><Link className="dropdown-item" href="/news-grid">News Grid</Link></li>
 								<li><Link className="dropdown-item" href="/news-grid-sidebar">News Grid Sidebar</Link></li>
 								<li><Link className="dropdown-item" href="/news-details">Blog Details</Link></li>
-							</ul>
-						</li>
-						<li className="nav-item dropdown menu-item-has-children">
-							<a className="nav-link fw-medium" onClick={() => handleAccordion(6)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-							<ul className={`dropdown-menu ${isAccordion === 6 ? "show" : ""}`}>
+							</ul> */}
+						{/* </li> */}
+						<li className="nav-item ">
+							<a href="/contact" className="nav-link fw-medium" onClick={() => handleAccordion(6)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact Us</a>
+							{/* <ul className={`dropdown-menu ${isAccordion === 6 ? "show" : ""}`}>
 								<li><Link className="dropdown-item" href="/contact">Contact Us</Link></li>
 								<li><Link className="dropdown-item" href="/pricing">Pricing</Link></li>
 								<li><Link className="dropdown-item" href="/team">Team</Link></li>
 								<li><Link className="dropdown-item" href="/team-detail">Team Details</Link></li>
 								<li><Link className="dropdown-item" href="/faq">FAQs</Link></li>
 								<li><Link className="dropdown-item" href="/404">Error 404</Link></li>
-							</ul>
+							</ul> */}
 						</li>
 					</ul>
 				</div>
-				<div className="side-gallery mb-4">
+				{/* <div className="side-gallery mb-4">
 					<div className="pt-1" />
 					<h4 className="mt-3 mb-3">Gallery</h4>
 					<div className="grid-items">
@@ -128,15 +128,15 @@ export default function Offcanvas({ isMobileMenu, handleMobileMenu }: any) {
 							<img className="g-col-4" src="/assets/imgs/pages/offcanvas/gallery-9.png" alt="vatech" />
 						</div>
 					</div>
-				</div>
-				<div className="box-contactus mb-30">
+				</div> */}
+				{/* <div className="box-contactus mb-30">
 					<h5 className="title-contactus neutral-1000 mb-3">Contact Us</h5>
 					<div className="contact-info">
 						<p className="address-2 text-md-medium neutral-1000"><strong>Address: </strong>1285 Crescent Wellington Heights, Louisville, KY 40204</p>
 						<p className="hour-work-2 text-md-medium neutral-1000"><strong>Hours: </strong> 8:00 - 17:00, Mon - Sat</p>
 						<p className="hour-work-2 text-md-medium neutral-1000"><strong>Phone: </strong> 01 256 986 3</p>
 					</div>
-				</div>
+				</div> */}
 			</div>
 
 			{isMobileMenu &&

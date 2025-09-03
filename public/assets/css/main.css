@@ -2470,7 +2470,20 @@ img {
 
 .card-pricing .top-pricing .desc-pricing {
 	margin-bottom: 30px;
+}/* global.css (mobile-first) */
+.mobile-menu-btn {
+  display: flex !important;       /* show by default (mobile) */
+  align-items: center;
+  justify-content: center;
 }
+
+/* hide on large screens (>= 992px) */
+@media (min-width: 992px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
 
 .card-pricing .top-pricing .pricing-price {
 	display: flex;
@@ -7174,7 +7187,7 @@ ul .card-icon-left .card-icon svg {
 }
 
 .offCanvas__info {
-	background: var(--tc-neutral-0) none repeat scroll 0 0;
+	background: black none repeat scroll 0 0;
 	height: 100%;
 	padding: 30px;
 	position: fixed;
@@ -7189,6 +7202,7 @@ ul .card-icon-left .card-icon svg {
 	z-index: 9999;
 	overflow-y: scroll;
 	transform: translateX(100%);
+	color:white;
 }
 
 .offCanvas__info.active {
@@ -7236,12 +7250,13 @@ ul .card-icon-left .card-icon svg {
 	margin-top: -16px;
 	text-align: right;
 	position: relative;
+	background-color:white;
 }
 
 .offCanvas__close-icon button {
 	background: transparent;
 	border: 0 none;
-	color: var(--tc-theme-primary);
+	background-color: white;
 	cursor: pointer;
 	font-size: 20px;
 	padding: 0;
@@ -7253,6 +7268,7 @@ ul .card-icon-left .card-icon svg {
 .offCanvas__close-icon button svg {
 	height: 20px;
 	width: 20px;
+	background-color:white;
 }
 
 .offCanvas__logo img {
