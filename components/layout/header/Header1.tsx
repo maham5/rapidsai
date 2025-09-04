@@ -40,16 +40,16 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
 									</div>
 								</div>
 								<div className="box-socials">
-									<Link href="/https://www.facebook.com/" className=" text-reset">
+									<Link href="#" className=" text-reset">
 										     <FaFacebook size={24} />
 									</Link>
-									<Link href="/https://www.instagram.com/" className=" text-reset">
+									<Link href="#" className=" text-reset">
 										 <FaLinkedin size={24} />
 									</Link>
-									<Link href="/https://twitter.com/" className=" text-reset">
+									<Link href="#" className=" text-reset">
 										  <FaGithub size={24} />
 									</Link>
-									<Link href="/https://www.linkedin.com/" className=" text-reset">
+									<Link href="#" className=" text-reset">
 										 <FaInstagram size={24} />
 									</Link>
 								</div>
