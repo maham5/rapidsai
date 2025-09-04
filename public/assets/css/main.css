@@ -2483,6 +2483,163 @@ img {
     display: none !important;
   }
 }
+.who-section {
+  position: relative;
+  background: linear-gradient(to left, #000 60%, #0d1933 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.who-heading {
+  text-align: center;
+  margin-bottom: 30px; /* space between heading and swiper */
+}
+
+.who-heading h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fafbec; /* make heading white for contrast */
+}
+
+.who-heading .highlight {
+  background: #af2025;
+  color: #fafbec;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+
+.who-slider {
+  width: 90%;
+  max-width: 1200px;
+  height: 500px;
+  
+  border-radius: 20px;
+}
+.who-slider,
+.who-heading {
+  position: relative;
+  z-index: 2; /* <-- This keeps swiper & heading on top of video */
+}
+
+.who-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* LEFT SIDE */
+.who-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.who-text h3 {
+  font-size: 2rem;
+  color: #fafbec;
+  margin-bottom: 1rem;
+}
+
+.who-text p {
+  color: #a99fa1;
+  line-height: 1.6;
+}
+
+/* PAGINATION STYLING */
+.who-pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.who-pagination .swiper-pagination-bullet {
+  background: #a99fa1;
+  opacity: 0.6;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+}
+
+.who-pagination .swiper-pagination-bullet-active {
+  background: #4caf50;
+  opacity: 1;
+}
+
+/* RIGHT SIDE */
+.who-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.corner-circle-wrapper {
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+  width: 750px;
+  height: 650px;
+  z-index: 0; /* <-- Send it to the back */
+}
+
+
+.corner-circle-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%; /* keeps it circular */
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 70%,   /* dark center */
+    rgba(0, 0, 0, 0) 90%    /* fades out smoothly */
+  );
+  z-index: 1; /* stays above video but below everything else */
+}
+
+.corner-circle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+  
+}
+
+
+
+.who-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Cube Shadows only during rotation */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right,
+.swiper-slide-shadow-top,
+.swiper-slide-shadow-bottom {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.swiper-animating .swiper-slide-shadow-left,
+.swiper-animating .swiper-slide-shadow-right,
+.swiper-animating .swiper-slide-shadow-top,
+.swiper-animating .swiper-slide-shadow-bottom {
+  opacity: 0.3;
+}
 
 
 .card-pricing .top-pricing .pricing-price {
@@ -17927,10 +18084,9 @@ footer .social-icons svg {
 /* Services Section */
 .services-section {
   background: linear-gradient(
-    to right,
-    black 0%,       /* start with black */
-    #0d1933 50%,    /* middle color */
-    black 100%      /* end with black */
+    to left,
+    #000 60%,      /* 80% of the section is pure black */
+    #0d1933 100%   /* last 20% has a very soft blue tone */
   );
   padding: 2rem 0;
   text-align: center;

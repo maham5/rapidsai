@@ -1,84 +1,123 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative, Autoplay, Pagination } from "swiper/modules";
-import AOS from "aos";
-
+import { Pagination, EffectCube, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/effect-creative";
+import "swiper/css/effect-cube";
 import "swiper/css/pagination";
-import "aos/dist/aos.css";
 
-const slides = [
-  {
-    title: "SUSTAINABLE",
-    heading: "GROWTH WITH AI",
-    text: "We build AI Solutions that can drive sustainable growth by creating innovative solutions, optimizing production processes, and enabling personalized experiences, thereby reducing resource consumption and enhancing efficiency across various sectors.",
-    img: "/images/slide1.png",
-  },
-  {
-    title: "INNOVATION",
-    heading: "TRANSFORMING INDUSTRIES",
-    text: "Our AI-powered innovations are designed to transform industries, improve productivity, and create new opportunities for growth and efficiency.",
-    img: "/images/slide2.png",
-  },
-  {
-    title: "EFFICIENCY",
-    heading: "SMARTER SOLUTIONS",
-    text: "We focus on delivering smarter AI solutions that enhance decision-making, reduce waste, and streamline workflows for organizations worldwide.",
-    img: "/images/slide3.png",
-  },
-];
-
-const Section8 = () => {
-  useEffect(() => {
-    AOS.init({ duration: 2000, easing: "ease-in-sine" });
-  }, []);
-
+export default function WhoWeAre() {
   return (
-    <div
-      className="our_slider"
-      data-aos="fade-up"
-      data-aos-easing="ease-in-sine"
-      data-aos-offset="200"
-    >
+    <section className="who-section">
+       {/* Corner Circle Video */}
+       <div className="corner-circle-wrapper">
+ <video 
+    src="/assets/imgs/template/circle.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="corner-circle"
+  />
+       </div>
+  
+
+      {/* Centered Heading */}
+      <div className="who-heading">
+        <h2>
+          Who <span className="highlight">We Are</span>
+        </h2>
+      </div>
+
+      {/* Swiper */}
       <Swiper
-        grabCursor={true}
-        effect="creative"
-        creativeEffect={{
-          prev: {
-            translate: [0, "-100%", 0], // vertical up
-          },
-          next: {
-            translate: [0, "100%", 0], // vertical down
-          },
+        className="who-slider"
+        modules={[Pagination, EffectCube, Autoplay]}
+        effect="cube"
+        cubeEffect={{
+          shadow: false,
+          slideShadows: true,
+          shadowOffset: 0,
+          shadowScale: 0.94,
+        }}
+        slidesPerView={1}
+        speed={900}
+        pagination={{
+          clickable: true,
+          el: ".who-pagination",
         }}
         autoplay={{
-          delay: 5000,
+          delay: 4000,
           disableOnInteraction: false,
         }}
-        pagination={{ clickable: true }}
-        modules={[EffectCreative, Autoplay, Pagination]}
-        className="swiper-container"
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="slide-content">
-              <div className="text-box">
-                <h3>{slide.title}</h3>
-                <h2>{slide.heading}</h2>
-                <p>{slide.text}</p>
+        {/* Slide 1 */}
+        <SwiperSlide>
+          <div className="who-content">
+            <div className="who-left">
+              <div className="who-text">
+                <h3>
+                  <span className="green-text">SUSTAINABLE</span><br />
+                  <span className="dark-text">GROWTH WITH AI</span>
+                </h3>
+                <p>
+                  We build AI solutions that drive sustainable growth by optimizing processes,
+                  enabling personalized experiences and reducing resource consumption.
+                </p>
               </div>
-              <div className="image-box">
-                <img src={slide.img} alt={slide.heading} />
-              </div>
+              
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-  );
-};
 
-export default Section8;
+            <div className="who-image">
+              <img src="/assets/imgs/pages/home7/about2.png" alt="Who we are" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 2 */}
+        <SwiperSlide>
+          <div className="who-content">
+            <div className="who-left">
+              <div className="who-text">
+                <h3>
+                  <span className="green-text">INNOVATIVE</span><br />
+                  <span className="dark-text">TECHNOLOGY SOLUTIONS</span>
+                </h3>
+                <p>
+                  We build scalable solutions focused on automation, data insights, and great UX.
+                </p>
+              </div>
+             
+            </div>
+            <div className="who-image">
+              <img src="/assets/imgs/pages/home7/about2.png" alt="Innovation" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 3 */}
+        <SwiperSlide>
+          <div className="who-content">
+            <div className="who-left">
+              <div className="who-text">
+                <h3>
+                  <span className="green-text">FUTURE-READY</span><br />
+                  <span className="dark-text">DIGITAL SOLUTIONS</span>
+                </h3>
+                <p>
+                  We prepare businesses for tomorrow with cloud-native, AI-driven, and secure digital products.
+                </p>
+              </div>
+              
+            </div>
+            <div className="who-image">
+              <img src="/assets/imgs/pages/home7/about2.png" alt="Future Ready" />
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </section>
+  );
+}
+

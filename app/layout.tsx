@@ -7,6 +7,9 @@ import "/public/assets/css/vendors/magnific-popup.css"
 import "/public/assets/fonts/bootstrap-icons/bootstrap-icons.min.css"
 import "/public/assets/fonts/boxicons/boxicons.min.css"
 import "/public/assets/css/main.css"
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-cube";
 import SmokeyCursor from "./cursor/cursor"
 import type { Metadata } from "next"
 import { Inter, Figtree, Rajdhani, Plus_Jakarta_Sans, Rubik } from "next/font/google"
