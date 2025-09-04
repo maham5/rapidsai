@@ -2483,16 +2483,7 @@ img {
     display: none !important;
   }
 }
-.who-section {
-  position: relative;
-  background: linear-gradient(to left, #000 60%, #0d1933 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 0;
-  overflow: hidden;
-}
+
 
 .who-heading {
   text-align: center;
@@ -2590,6 +2581,7 @@ img {
   height: 650px;
   z-index: 0; /* <-- Send it to the back */
 }
+
 
 
 .corner-circle-wrapper::before {
@@ -20881,3 +20873,60 @@ textarea.form-control {
         background-size: 300% 300%;
         animation: shine 6s ease-out infinite;
     }
+
+/* Section must be relative so video stays inside it */
+.who-section {
+  position: relative;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+   background: linear-gradient(to left, #000 60%, #0d1933 100%);
+  overflow: hidden; /* keeps video limited to this section */
+}
+
+/* Desktop circular style */
+.corner-circle-wrapper {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 700px;
+  height: 650px;
+  z-index: 0; /* stays behind content */
+}
+
+/* Video should stay inside wrapper */
+.corner-circle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Mobile/Tablet: make it full section background */
+@media (max-width: 992px) {
+  .corner-circle-wrapper {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .corner-circle {
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3; /* make text readable */
+	
+  }
+   .who-section {
+    background: #000;
+  }
+}
