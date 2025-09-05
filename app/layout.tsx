@@ -71,7 +71,7 @@ export default function RootLayout({
                 
                 {children}
                 
-                <GlobalCursor/>
+            
                 </body>
         </html>
     )
