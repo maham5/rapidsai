@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaInstagram, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin, FaFacebook ,FaTwitter } from 'react-icons/fa';
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handleSearch, isSearch }: any) {
 
@@ -47,7 +47,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
 										 <FaLinkedin size={24} />
 									</Link>
 									<Link href="#" className=" text-reset">
-										  <FaGithub size={24} />
+										  <FaTwitter  size={24} />
 									</Link>
 									<Link href="#" className=" text-reset">
 										 <FaInstagram size={24} />
@@ -157,12 +157,14 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
     <path d="M10 2H30" stroke="white" strokeWidth={3} />
   </svg>
 </a>
-
+<Link href="/contact">
 <div className="rainbow">
     <button className="rainbow-button ">
         Get Started
     </button>
 </div>
+</Link>
+
 
 
 							</div>
