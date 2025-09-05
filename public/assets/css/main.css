@@ -14486,7 +14486,7 @@ textarea.input-field {
   overflow: hidden;
 }
 
-.contact-map iframe {
+.iframe {
   width: 100%;
   height: 100%;
   border: none;
@@ -21144,3 +21144,52 @@ textarea {
   transition: background 0.3s;
 }
 
+/* Map container default styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%; /* Default for desktop */
+  filter: grayscale(80%) contrast(90%);
+
+  overflow: hidden;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+  .leaflet-container {
+    height: 300px; 
+		flex-direction: column;/* Slightly shorter for tablets */
+  }
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 480px) {
+  .leaflet-container {
+    height: 250px;
+	flex-direction: column; /* Compact height for small screens */
+   
+  }
+}
+/* ✅ Make it responsive for mobile screens */
+@media (max-width: 768px) {
+  .contact-map {
+    height: 250px; 
+	flex-direction: column; /* /* smaller but visible */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-map {
+    height: 200px;
+		flex-direction: column;
+	 /* even smaller on tiny screens */
+  }
+}
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column; /* ✅ Column on mobile */
+  }
+
+  .contact-map {
+    height: 250px; /* Fixed height on mobile */
+  }
+}

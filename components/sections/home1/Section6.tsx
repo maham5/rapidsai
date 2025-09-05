@@ -2,8 +2,11 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import ModalVideo from 'react-modal-video'
-import Map from './Section10'
+import dynamic from "next/dynamic";
 
+const Map = dynamic(() => import("./Section10"), {
+  ssr: false, // ✅ This disables server-side rendering for the map
+});
 
 export default function Section6() {
 
@@ -46,7 +49,7 @@ export default function Section6() {
         </div>
 
         {/* Right Side - Map */}
-       <div className="contact-map">
+       <div className="contact-map ">
 <Map/>
 </div>
       </div>

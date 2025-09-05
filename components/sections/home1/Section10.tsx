@@ -59,19 +59,7 @@ const Map = () => {
     };
   }, []);
 
-  return (
-    <div
-      id="leaflet-map"
-      style={{
-        height: "100%", // Make sure height is fixed
-        width: "100%",
-       
-    filter: "grayscale(80%) contrast(90%)", // ✅ Must be a string
-
-        overflow: "hidden",
-      }}
-    />
-  );
+  return <div id="leaflet-map" className="leaflet-container" />;
 };
 
 export default Map;

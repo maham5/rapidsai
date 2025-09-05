@@ -7,9 +7,12 @@ import "/public/assets/css/vendors/magnific-popup.css"
 import "/public/assets/fonts/bootstrap-icons/bootstrap-icons.min.css"
 import "/public/assets/fonts/boxicons/boxicons.min.css"
 import "/public/assets/css/main.css"
+
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-cube";
+
 
 
 // import SmokeyCursor from "./cursor/cursor"
@@ -65,7 +68,11 @@ export default function RootLayout({
            
             <body className={`${inter.variable} ${figtree.variable} ${rajdhani.variable} ${rubik.variable} ${jakarta.variable}`}>
                 {/* + */}
-                {children}</body>
+                
+                {children}
+                
+                <GlobalCursor/>
+                </body>
         </html>
     )
 }
