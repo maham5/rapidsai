@@ -158,10 +158,10 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
   </svg>
 </a>
 
-<div className="d-flex align-items-center gap-1">
-  <div className="button-bg btn">
-    <button>Get Started</button>
-  </div>
+<div className="rainbow">
+    <button className="rainbow-button ">
+        Get Started
+    </button>
 </div>
 
 

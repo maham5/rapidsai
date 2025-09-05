@@ -21,7 +21,7 @@ export default function Section6() {
           <h2 className="contact-title">Let's Get In Touch</h2>
 
           <form className="contact-form">
-            <div className="input-row">
+            <div className="input-row1">
               <input type="text" placeholder="Full Name" className="input-field" />
               <input type="text" placeholder="Phone Number" className="input-field" />
             </div>

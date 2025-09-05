@@ -13870,6 +13870,7 @@ h6 {
 
 .form-group {
 	margin-bottom: 20px;
+	padding:7px;
 }
 
 .form-control {
@@ -14429,10 +14430,14 @@ h6 {
   margin-bottom: 24px;
 }
 
-.contact-form .input-row {
+.contact-form .input-row1 {
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
+  background-color:white;
+}
+.contact-form textarea{
+	background-color: white;
 }
 
 .input-field {
@@ -14443,7 +14448,8 @@ h6 {
   outline: none;
   transition: 0.3s;
   font-size: 1rem;
-  margin-bottom: 16px; /* gap between stacked inputs */
+  margin-bottom: 16px;
+   /* gap between stacked inputs */
 }
 
 .input-field:focus {
@@ -14453,6 +14459,7 @@ h6 {
 
 textarea.input-field {
   resize: none;
+  color:white;
 }
 
 .contact-button {
@@ -20930,3 +20937,210 @@ textarea.form-control {
     background: #000;
   }
 }
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* Button container with rainbow effect */
+.rainbow {
+    position: relative;
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.15); /* bg-white/15 */
+    overflow: hidden;
+    padding: 0.125rem; /* p-0.5 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.rainbow:hover {
+    transform: scale(1.05);
+}
+
+.rainbow:active {
+    transform: scale(1);
+}
+
+/* Animated blurred background behind button */
+.rainbow::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 50% 30%;
+    filter: blur(6px);
+    background-image: linear-gradient(#fff);
+    animation: rotate 4s linear infinite;
+}
+
+/* Rotate animation */
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+/* Button styling */
+.rainbow-button {
+    position: relative;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #fafbec;
+    background-color: #af2025;
+    backdrop-filter: blur(4px);
+    border: none;
+    cursor: pointer;
+    overflow: hidden; /* needed for hover overlay */
+    z-index: 1;
+}
+
+/* Diagonal black overlay */
+.rainbow-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+    transform: translate(100%, 100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.rainbow-button:hover::after {
+    transform: translate(0, 0);
+}
+
+
+    #fluid {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+    }
+    
+    .info {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        font-size: 14px;
+        z-index: 100;
+        background: rgba(0,0,0,0.5);
+        padding: 10px;
+        border-radius: 5px;
+    }
+/* General Form Styles */
+.form-section{
+background: linear-gradient(to right, #000, #0d1933 ,#000);
+	width:100%;
+	height: 100%;
+	padding-top:5%
+
+}
+.contact-form1 {
+  max-width: 999px;
+ margin:auto;
+  font-family: Arial, sans-serif;
+  
+}
+
+.form-row {
+  display: flex;
+  gap: 5%;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form-heading{
+	padding:1%;
+	
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color:#fafbec;
+}
+
+label span {
+  color: #af2025;
+}
+
+.contact-form1 input,
+textarea {
+  padding: 15px;
+  border: 1px solid #fafbec;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fafbec;
+}
+
+.contact-form1 textarea {
+  min-height: 150px;
+  resize: vertical;
+  
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  width:100%
+}
+
+.options button {
+  padding: 16px 45px;
+  border: 1px solid #fafbec;
+  border-radius: 4px;
+  background: #fafbec;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.options button:hover {
+  background: #f2f2f2;
+}
+
+.options button.selected {
+  background: #af2025;
+  color: #fafbec;
+  font-weight: 600;
+}
+
+.submit-btn {
+  background: #af2025;
+  color: white;
+  padding: 20px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+

@@ -10,7 +10,7 @@ import "/public/assets/css/main.css"
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-cube";
-import SmokeyCursor from "./cursor/cursor"
+// import SmokeyCursor from "./cursor/cursor"
 import type { Metadata } from "next"
 import { Inter, Figtree, Rajdhani, Plus_Jakarta_Sans, Rubik } from "next/font/google"
 
@@ -62,7 +62,7 @@ export default function RootLayout({
         <html lang="en">
            
             <body className={`${inter.variable} ${figtree.variable} ${rajdhani.variable} ${rubik.variable} ${jakarta.variable}`}>
-                 <SmokeyCursor/>
+                {/* + */}
                 {children}</body>
         </html>
     )
