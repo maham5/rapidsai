@@ -4,13 +4,80 @@ import Layout from "@/components/layout/Layout"
 import { sliderGroup2 } from '@/util/swiperOptions'
 import { FaInstagram, FaGithub, FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
 
-import Image from "next/image"
+
 import logo from "@/public/assets/imgs/template/dark-logo.png"
 
 import { sliderGroup3 } from '@/util/swiperOptions'
 import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useState } from 'react'
+import ModalVideo from 'react-modal-video'
+import Image from 'next/image'
+// import React, { useEffect } from "react";
+
+
+
+
+
+
+
+import img1 from "@/public/assets/imgs/template/1p.png";
+import img2 from "@/public/assets/imgs/template/1p.png";
+import img3 from "@/public/assets/imgs/template/1p.png";
+import img4 from "@/public/assets/imgs/template/1p.png";
+import img5 from "@/public/assets/imgs/template/1p.png";
+import img6 from "@/public/assets/imgs/template/1p.png";
+import img7 from "@/public/assets/imgs/template/1p.png";
+import img8 from "@/public/assets/imgs/template/1p.png";
+import img9 from "@/public/assets/imgs/template/1p.png";
+import img10 from "@/public/assets/imgs/template/1p.png";
+
+
+
+
+
+// const slides = [
+//   {
+//     title: "SUSTAINABLE",
+//     heading: "GROWTH WITH AI",
+//     text: "We build AI Solutions that can drive sustainable growth by creating innovative solutions, optimizing production processes, and enabling personalized experiences, thereby reducing resource consumption and enhancing efficiency across various sectors.",
+//     img: "https://via.placeholder.com/400x280.png?text=Slide+1",
+//   },
+//   {
+//     title: "INNOVATION",
+//     heading: "TRANSFORMING INDUSTRIES",
+//     text: "Our AI-powered innovations are designed to transform industries, improve productivity, and create new opportunities for growth and efficiency.",
+//     img: "https://via.placeholder.com/400x280.png?text=Slide+2",
+//   },
+//   {
+//     title: "EFFICIENCY",
+//     heading: "SMARTER SOLUTIONS",
+//     text: "We focus on delivering smarter AI solutions that enhance decision-making, reduce waste, and streamline workflows for organizations worldwide.",
+//     img: "https://via.placeholder.com/400x280.png?text=Slide+3",
+//   },
+// ];
+
+const logos = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10];
+
+function Row({ prefix = "A" }) {
+  return (
+    <div className="row-container">
+      {logos.map((src, i) => (
+        <div key={`${prefix}-${i}`} className="logo-wrapper">
+          <Image
+            src={src}
+            alt={`Logo ${i + 1}`}
+            width={80}
+            height={80}
+            className="logo-image"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 export default function AboutUs() {
+const [isOpen, setOpen] = useState(false)
 
 	return (
 		<>
@@ -160,8 +227,8 @@ export default function AboutUs() {
           <div className="icon-left"></div>
         </div>
         <div className="card-info">
-          <h4>IT expertise gap</h4>
-          <p>Rapidsai Group offers global IT outsourcing with cost-effective turnkey solutions</p>
+          <h4>IT Expertise Gap</h4>
+          <p>Rapidsai Group offers global IT outsourcing with cost-effective turn key solutions</p>
         </div>
       </div>
     </div>
@@ -172,7 +239,7 @@ export default function AboutUs() {
           <div className="icon-left"></div>
         </div>
         <div className="card-info">
-          <h4>Cost reduction</h4>
+          <h4>Cost Reduction</h4>
           <p>
 
 Rapidsai Group provides cost-effective IT outsourcing solutions</p>
@@ -187,8 +254,7 @@ Rapidsai Group provides cost-effective IT outsourcing solutions</p>
           <div className="icon-left"></div>
         </div>
         <div className="card-info">
-          <h4>Digital 
-transformation</h4>
+          <h4>Digital Transformation</h4>
           <p>Rapidsai Group drives digital transformation, unlocking business growth with expertise.</p>
         </div>
       </div>
@@ -198,6 +264,17 @@ transformation</h4>
 </div>
 </div>
 			</section>
+
+			<section className="section1">
+   
+
+      <div className="marquee-wrapper">
+        <div className="marquee-track">
+          <Row prefix="A" />
+          <Row prefix="B" />
+        </div>
+      </div>
+	  </section>
 
 					<footer>
 			   <Image src={logo}
@@ -226,6 +303,9 @@ transformation</h4>
 				  </a>
 				</div>
 			</footer>
+
+
+			 
 			</Layout >
 		</>
 	)

@@ -4871,24 +4871,24 @@ img {
 
 .card-blog-7 {
 	position: relative;
-	background-color: var(--tc-theme-main);
+	background-color: blue;
 	margin-bottom: 30px;
 }
 
 .card-blog-7 .card-image {
-	position: relative;
+
 	overflow: hidden;
-	border-radius: 20px;
-	z-index: 1;
+	
+	z-index: 0;
 }
 
 .card-blog-7 .card-info {
 	padding: 25px 30px 30px 30px;
-	position: relative;
+	
 	margin-top: -54px;
-	z-index: 2;
+	z-index: 0;
 	box-shadow: var(--tc-shadow-1);
-	border-radius: 0px 0px 20px 20px;
+	
 	background-color: transparent;
 }
 
@@ -12800,7 +12800,7 @@ h6 {
 	font-size: 18px;
 	line-height: 27px;
 	font-weight: 700;
-	color: var(--tc-theme-main);
+	color: #fafbec;
 	font-family: var(--rajdhani);
 	text-transform: uppercase;
 	position: relative;
@@ -21191,5 +21191,247 @@ textarea {
 
   .contact-map {
     height: 250px; /* Fixed height on mobile */
+  }
+}
+
+
+/* Card styling */
+.card-blog {
+  background: #111; /* Dark background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  color: #fff;
+}
+
+.card-blog:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.card-blog .card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card body */
+.card-body {
+  padding: 16px;
+}
+
+/* Title */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.card-title:hover {
+  color: #0d6efd; /* Blue hover */
+}
+
+/* Description */
+.card-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* "Discover More" link */
+.card-link {
+  color: #0d6efd;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Pagination */
+.pagination-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.page-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 0 4px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.page-btn:hover {
+  background: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.page-btn.active {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  font-weight: bold;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+* ✅ Responsive Adjustments */
+
+/* Card styling */
+.card-blog {
+  background: #111; /* Dark background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-blog:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.card-blog .card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card body */
+.card-body {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.card-title:hover {
+  color: #0d6efd; /* Blue hover */
+}
+
+/* Description */
+.card-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* "Discover More" link */
+.card-link {
+  color: #0d6efd;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Pagination */
+.pagination-container {
+  margin-top: 30px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 4px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.95rem;
+}
+
+.page-btn:hover {
+  background: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.page-btn.active {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  font-weight: bold;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ✅ Responsive Adjustments */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .card-blog .card-image img {
+    height: 200px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .card-blog {
+    border-radius: 10px;
+  }
+
+  .card-blog .card-image img {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
+
+  .page-btn {
+    font-size: 0.85rem;
+    padding: 6px 10px;
   }
 }

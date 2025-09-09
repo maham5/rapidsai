@@ -117,20 +117,13 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
 									</ul> */}
 								</li>
 								<li className="nav-item ">
-									<Link className="nav-link fw-medium" href="/project" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</Link>
+									<Link className="nav-link fw-medium" href="/projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</Link>
 									{/* <ul className="dropdown-menu">
 										<li><Link className="dropdown-item" >Project List</Link></li>
 										<li><Link className="dropdown-item" href="/project-detail">Project Details</Link></li>
 									</ul> */}
 								</li>
-								<li className="nav-item ">
-									<Link className="nav-link fw-medium"  href="/news-grid" role="button" data-bs-toggle="dropdown" aria-expanded="false">Team</Link>
-									{/* <ul className="dropdown-menu">
-										<li><Link className="dropdown-item">News Grid</Link></li>
-										<li><Link className="dropdown-item" href="/news-grid-sidebar">News Grid Sidebar</Link></li>
-										<li><Link className="dropdown-item" href="/news-details">Blog Details</Link></li>
-									</ul> */}
-								</li>
+								
 								<li className="nav-item ">
 									<Link className="nav-link fw-medium" href="/contact" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact Us</Link>
 									{/* <ul className="dropdown-menu">
