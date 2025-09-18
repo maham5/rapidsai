@@ -12198,7 +12198,11 @@ h6 {
 .box-banner {
 	position: relative;
 	padding: 180px 0px 259px 0px;
-	background: url(../imgs/pages/home1/banner.png) no-repeat top center;
+ background: linear-gradient(
+    to left,
+    #000 60%,      /* 80% of the section is pure black */
+    #0d1933 100%   /* last 20% has a very soft blue tone */
+  );
 	background-size: cover;
 }
 
@@ -12210,7 +12214,7 @@ h6 {
 	height: 100%;
 	width: 100%;
 	z-index: 1;
-	background: url(../imgs/pages/home1/bg-banner.png) no-repeat top center;
+	
 }
 
 .box-banner .container {
@@ -14468,7 +14472,7 @@ textarea.input-field {
 
 .contact-button {
   width: 100%;
-  background-color: #0d1933;
+  background-color: #af2025;
   color: #fafbec;
   padding: 12px;
   border-radius: 8px;
@@ -14479,7 +14483,7 @@ textarea.input-field {
 }
 
 .contact-button:hover {
-  background-color: #333;
+  background-color: #ca2128;
 }
 
 /* Map Side */
@@ -16332,7 +16336,7 @@ textarea.input-field {
 }
 
 .box-list-projects-9 .box-ul ul li a.active {
-	background-color: var(--tc-primary-500);
+	background-color: #af2025;
 }
 
 .box-list-projects-9 .box-content-tab {
@@ -21073,10 +21077,88 @@ background: linear-gradient(to right, #000, #0d1933 ,#000);
   flex-direction: column;
 }
 
-.form-group.full {
-  width: 100%;
-  margin-bottom: 20px;
+.form-group.full button.submit-btn {
+  width: auto;          /* shrink to fit content */
+  min-width: 250px;     /* optional */
+  margin-left: 0;    /* push button to right */
+  margin-right: auto;      /* no extra right margin */
+  display: block;       /* keep it block for alignment */
+  border-radius: 6px;   /* optional */
 }
+/* 🔥 Gradient Border Animation */
+@keyframes rotate-border {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.glow-border {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.125rem; /* thin animated border */
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+}
+
+.glow-border:hover {
+  transform: scale(1.05);
+}
+
+.glow-border:active {
+  transform: scale(1);
+}
+
+.glow-border::before {
+  content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 50% 30%;
+    filter: blur(6px);
+    background-image: linear-gradient(#fafbec);
+    animation: rotate 4s linear infinite;
+}
+
+/* 🎯 Button styling */
+.glow-button {
+  padding: 1.25rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #af2025;
+  backdrop-filter: blur(6px);
+  border: none;
+ width:250px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 6px;
+}
+.glow-button::after{
+	  content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+    transform: translate(100%, 100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+}
+.glow-button:hover::after {
+    transform: translate(0, 0);
+}
+
+
+
 .form-heading{
 	padding:1%;
 	
@@ -21152,7 +21234,7 @@ textarea {
 .leaflet-container {
   width: 100%;
   height: 100%; /* Default for desktop */
-  filter: grayscale(80%) contrast(90%);
+  
 
   overflow: hidden;
 }
@@ -21437,5 +21519,51 @@ textarea {
   .page-btn {
     font-size: 0.85rem;
     padding: 6px 10px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .form-row {
+    flex-direction: column;
+    gap: 20px; /* space between stacked inputs */
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .options button {
+    flex: 1 1 100%; /* make option buttons full width */
+    text-align: center;
+  }
+
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form1 {
+    padding: 0 15px; /* small padding for mobile */
+  }
+
+  label {
+    font-size: 16px; /* smaller labels for mobile */
+  }
+
+  .contact-form1 input,
+  .contact-form1 textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .options {
+    flex-direction: column; /* stack option buttons vertically */
+  }
+
+  .options button {
+    width: 100%;
   }
 }

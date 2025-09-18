@@ -2,7 +2,7 @@
 import CountUp from 'react-countup'
 import Layout from "@/components/layout/Layout"
 import { sliderGroup2 } from '@/util/swiperOptions'
-import { FaInstagram, FaGithub, FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaInstagram,  FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 
 import logo from "@/public/assets/imgs/template/dark-logo.png"
@@ -289,9 +289,7 @@ Rapidsai Group provides cost-effective IT outsourcing solutions</p>
 				  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
 					<FaInstagram size={24} />
 				  </a>
-				  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-					<FaGithub size={24} />
-				  </a>
+				  
 				  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
 					<FaLinkedin size={24} />
 				  </a>

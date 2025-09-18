@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState } from "react";
 import Image from "next/image"
 import logo from "@/public/assets/imgs/template/dark-logo.png"
-import { FaInstagram, FaGithub, FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaInstagram,  FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 export default function Contact() {
 	 const [formData, setFormData] = useState({
@@ -156,10 +156,9 @@ export default function Contact() {
         />
       </div>
 
-      {/* Submit */}
-      <div className="form-group full">
-        <button type="submit" className="submit-btn rainbow-button">SEND MESSAGE →</button>
-      </div>
+     <div className="glow-border">
+  <button className="glow-button">Contact Us</button>
+</div>
     </form>
 
 
@@ -176,9 +175,7 @@ export default function Contact() {
 	  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
 		<FaInstagram size={24} />
 	  </a>
-	  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-		<FaGithub size={24} />
-	  </a>
+	  
 	  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
 		<FaLinkedin size={24} />
 	  </a>
