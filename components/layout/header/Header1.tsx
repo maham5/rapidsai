@@ -139,19 +139,17 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
     {/* Left Sidebar */}
     <div className="dropdown-sidebar">
       <h2 className="dropdown-title">OUR SERVICES</h2>
-      <ul className="dropdown-categories">
-        {Object.keys(menuItems).map((category) => (
-          <li
-            key={category}
-            className={`dropdown-category ${
-              activeCategory === category ? "active" : ""
-            }`}
-            onClick={() => setActiveCategory(category)}
-          >
-            {category}
-          </li>
-        ))}
-      </ul>
+     <ul className="dropdown-categories">
+  {(Object.keys(menuItems) as Category[]).map((category) => (
+    <li
+      key={category}
+      className={`dropdown-category ${activeCategory === category ? "active" : ""}`}
+      onClick={() => setActiveCategory(category)}
+    >
+      {category}
+    </li>
+  ))}
+</ul>
     </div>
 
     {/* Right Content */}
