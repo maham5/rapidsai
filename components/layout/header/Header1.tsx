@@ -1,9 +1,30 @@
 import Link from 'next/link'
+import { useState } from 'react';
 import { FaInstagram, FaGithub, FaLinkedin, FaFacebook ,FaTwitter } from 'react-icons/fa';
+type Category = "Blockchain" | "AI" | "Bioinformatics" | "GIS";
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handleSearch, isSearch }: any) {
+  const [activeCategory, setActiveCategory] = useState<Category>("Blockchain");
 
-	
+  const menuItems: Record<Category, { name: string; href: string }[]> = {
+  Blockchain: [
+    { name: "Services 01", href: "/services" },
+    { name: "Services 02", href: "/services-2" },
+    { name: "Services Details 01", href: "/service-detail" },
+  ],
+  AI: [
+    { name: "Services 03", href: "/services-3" },
+    { name: "Services 04", href: "/services-4" },
+    { name: "Services Details 02", href: "/service-detail-2" },
+  ],
+  Bioinformatics: [
+    { name: "Services Details 03", href: "/service-detail-3" },
+  ],
+  GIS: [
+    { name: "Services Details 04", href: "/service-detail-4" },
+  ],
+};
+
 	return (
 		<>
 
@@ -103,19 +124,52 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
 										<li><Link className="dropdown-item" href="/about-us-4">About Us 4</Link></li>
 									</ul> */}
 								</li>
-								<li className="nav-item ">
-									<Link className="nav-link fw-medium" href="/services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</Link>
-									{/* <ul className="dropdown-menu">
-										<li><Link className="dropdown-item" href="/services">Services 01</Link></li>
-										<li><Link className="dropdown-item" href="/services-2">Services 02</Link></li>
-										<li><Link className="dropdown-item" href="/services-3">Services 03</Link></li>
-										<li><Link className="dropdown-item" href="/services-4">Services 04</Link></li>
-										<li><Link className="dropdown-item" href="/service-detail">Services Details 01</Link></li>
-										<li><Link className="dropdown-item" href="/service-detail-2">Services Details 02</Link></li>
-										<li><Link className="dropdown-item" href="/service-detail-3">Services Details 03</Link></li>
-										<li><Link className="dropdown-item" href="/service-detail-4">Services Details 04</Link></li>
-									</ul> */}
-								</li>
+	<li className="nav-item dropdown menu-item-has-children">
+  <Link
+    className="nav-link fw-medium"
+    href="#"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Services
+  </Link>
+
+  <div className="dropdown-container">
+    {/* Left Sidebar */}
+    <div className="dropdown-sidebar">
+      <h2 className="dropdown-title">OUR SERVICES</h2>
+      <ul className="dropdown-categories">
+        {Object.keys(menuItems).map((category) => (
+          <li
+            key={category}
+            className={`dropdown-category ${
+              activeCategory === category ? "active" : ""
+            }`}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Right Content */}
+    <div className="dropdown-content">
+      <h2 className="dropdown-subtitle">{activeCategory} Services</h2>
+      <ul className="dropdown-items">
+        {menuItems[activeCategory].map((item) => (
+          <li key={item.href}>
+            <Link href={item.href} className="dropdown-item">
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</li>
+
 								<li className="nav-item ">
 									<Link className="nav-link fw-medium" href="/projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</Link>
 									{/* <ul className="dropdown-menu">
