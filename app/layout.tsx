@@ -73,9 +73,11 @@ export default function RootLayout({
                 {/* + */}
                 
                 {children}
-                
+                <SmokeyCursor
+       
+      />
             
-            <SmokeyCursor/>
+        
                 </body>
             
         </html>
