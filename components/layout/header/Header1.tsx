@@ -8,20 +8,23 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
 
   const menuItems: Record<Category, { name: string; href: string }[]> = {
   Blockchain: [
-    { name: "Services 01", href: "/services" },
-    { name: "Services 02", href: "/services-2" },
-    { name: "Services Details 01", href: "/service-detail" },
+    { name: "Smart Contracts", href: "/services" },
+    { name: "DApps", href: "/services-2" },
+    // { name: "Services Details 01", href: "/service-detail" },
   ],
   AI: [
-    { name: "Services 03", href: "/services-3" },
-    { name: "Services 04", href: "/services-4" },
-    { name: "Services Details 02", href: "/service-detail-2" },
+    { name: "Machine Learning", href: "/services-3" },
+    { name: "Deep Learning", href: "/services-4" },
+    { name: "Computer Vision", href: "/service-detail-2" },
   ],
   Bioinformatics: [
-    { name: "Services Details 03", href: "/service-detail-3" },
+    { name: "Genome Analysis", href: "/service-detail-3" },
+	{ name: "Protein Folding", href: "/service-detail" },
   ],
   GIS: [
-    { name: "Services Details 04", href: "/service-detail-4" },
+    { name: "Mapping Solutions", href: "/service-detail-4" },
+    { name: "Spatial Data Analysis", href: "/service-detail-4" },
+
   ],
 };
 
