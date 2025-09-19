@@ -12,16 +12,17 @@ import Image from 'next/image'
 
 
 
-import img1 from "@/public/assets/imgs/template/1p.png";
-import img2 from "@/public/assets/imgs/template/1p.png";
-import img3 from "@/public/assets/imgs/template/1p.png";
-import img4 from "@/public/assets/imgs/template/1p.png";
-import img5 from "@/public/assets/imgs/template/1p.png";
-import img6 from "@/public/assets/imgs/template/1p.png";
-import img7 from "@/public/assets/imgs/template/1p.png";
-import img8 from "@/public/assets/imgs/template/1p.png";
-import img9 from "@/public/assets/imgs/template/1p.png";
-import img10 from "@/public/assets/imgs/template/1p.png";
+import img1 from "@/public/assets/imgs/template/cth.png";
+import img2 from "@/public/assets/imgs/template/goodf.png";
+
+import img3 from "@/public/assets/imgs/template/uppww.png";
+import img4 from "@/public/assets/imgs/template/fivr.png";
+import img5 from "@/public/assets/imgs/template/link.png";
+import img6 from "@/public/assets/imgs/template/goodf.png";
+
+import img8 from "@/public/assets/imgs/template/cth.png";
+import img9 from "@/public/assets/imgs/template/uppww.png";
+
 
 
 
@@ -48,7 +49,7 @@ import img10 from "@/public/assets/imgs/template/1p.png";
 //   },
 // ];
 
-const logos = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10];
+const logos = [img1,img2,img3,img4,img5,img6,img8,img9];
 
 function Row({ prefix = "A" }) {
   return (
@@ -59,7 +60,7 @@ function Row({ prefix = "A" }) {
             src={src}
             alt={`Logo ${i + 1}`}
             width={80}
-            height={80}
+            height={92}
             className="logo-image"
           />
         </div>
