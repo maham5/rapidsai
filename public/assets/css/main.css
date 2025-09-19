@@ -10459,7 +10459,7 @@ footer {
 	padding: 10px;
 	font-size: 16px;
 	--swiper-navigation-color:#af2025;
-	border-radius: 30px;
+	/* border-radius: 30px; */
 	border: 1px solid var(--tc-neutral-400);
 }
 
@@ -10467,7 +10467,7 @@ footer {
 .swiper-button-next :active,
 .swiper-button-prev:hover,
 .swiper-button-prev :active {
-	border-color: #af2025;
+	/* border-color: #af2025; */
 	--swiper-navigation-color: #af2025;
 }
 
@@ -11771,7 +11771,7 @@ h6 {
 	top: auto;
 	left: auto;
 	right: auto;
-	line-height: 27px;
+	line-height: 30px;
 }
 
 .stroke-text {
@@ -14917,10 +14917,10 @@ textarea.input-field {
 	stroke: var(--tc-theme-main);
 }
 
-.box-button-slider-500 .swiper-button-prev-style-1:hover,
+/* .box-button-slider-500 .swiper-button-prev-style-1:hover,
 .box-button-slider-500 .swiper-button-next-style-1:hover {
 	background-color: #af2025;
-}
+} */
 
 .box-banner-7::before {
 	content: "";
@@ -18224,10 +18224,10 @@ footer .social-icons svg {
 	stroke: var(--tc-theme-main);
 }
 
-.box-button-slider-testimonials-16 .swiper-button-prev-style-6:hover,
+/* .box-button-slider-testimonials-16 .swiper-button-prev-style-6:hover,
 .box-button-slider-testimonials-16 .swiper-button-next-style-6:hover {
 	background-color: #af2025;
-}
+} */
 
 .box-button-slider-testimonials-16 .swiper-button-prev-style-6:hover svg,
 .box-button-slider-testimonials-16 .swiper-button-next-style-6:hover svg {
@@ -21610,7 +21610,6 @@ textarea {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color:white
 }
 
 .dropdown-category:hover {
