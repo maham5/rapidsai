@@ -13,6 +13,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-cube";
 
+import SmokeyCursor from "@/src/components/lightswind/smokey-cursor"
+
+
 
 
 // import SmokeyCursor from "./cursor/cursor"
@@ -65,14 +68,16 @@ export default function RootLayout({
     return (
        
         <html lang="en">
-           
+      
             <body className={`${inter.variable} ${figtree.variable} ${rajdhani.variable} ${rubik.variable} ${jakarta.variable}`}>
                 {/* + */}
                 
                 {children}
                 
             
+            <SmokeyCursor/>
                 </body>
+            
         </html>
     )
 }

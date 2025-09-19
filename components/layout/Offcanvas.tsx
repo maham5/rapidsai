@@ -3,7 +3,35 @@ import { useState } from 'react';
 
 import Link from 'next/link'
 
+const menuItems = {
+  Blockchain: [
+    { name: "Smart Contracts", href: "/blockchain/smart-contracts" },
+    { name: "DApps", href: "/blockchain/dapps" },
+  ],
+  AI: [
+    { name: "Machine Learning", href: "/ai/ml" },
+    { name: "Deep Learning", href: "/ai/dl" },
+    { name: "Computer Vision", href: "/ai/cv" },
+  ],
+  Bioinformatics: [
+    { name: "Genome Analysis", href: "/bio/genome" },
+    { name: "Protein Folding", href: "/bio/protein" },
+  ],
+  GIS: [
+    { name: "Mapping Solutions", href: "/gis/maps" },
+    { name: "Spatial Data Analysis", href: "/gis/spatial" },
+  ],
+};
+
+type Category = keyof typeof menuItems;
+
 export default function Offcanvas({ isMobileMenu, handleMobileMenu }: any) {
+	const [openCategory, setOpenCategory] = useState<Category | null>(null);
+
+const toggleCategory = (category: Category) => {
+  setOpenCategory(openCategory === category ? null : category);
+};
+
 	const [isAccordion, setIsAccordion] = useState(0)
 
 	const handleAccordion = (key: any) => {
@@ -57,16 +85,32 @@ export default function Offcanvas({ isMobileMenu, handleMobileMenu }: any) {
 						</li>
 						<li className="nav-item ">
 							<a href="/services" className="nav-link fw-medium" onClick={() => handleAccordion(3)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-							{/* <ul className={`dropdown-menu ${isAccordion === 3 ? "show" : ""}`}>
-								<li><Link className="dropdown-item" href="/services">Services 01</Link></li>
-								<li><Link className="dropdown-item" href="/services-2">Services 02</Link></li>
-								<li><Link className="dropdown-item" href="/services-3">Services 03</Link></li>
-								<li><Link className="dropdown-item" href="/services-4">Services 03</Link></li>
-								<li><Link className="dropdown-item" href="/service-detail">Service Details 01</Link></li>
-								<li><Link className="dropdown-item" href="/service-detail-2">Service Details 02</Link></li>
-								<li><Link className="dropdown-item" href="/service-detail-3">Service Details 03</Link></li>
-								<li><Link className="dropdown-item" href="/service-detail-4">Service Details 04</Link></li>
-							</ul> */}
+							<ul className="mobile-dropdown">
+  {(Object.keys(menuItems) as (keyof typeof menuItems)[]).map((category) => (
+    <li key={category} className="mobile-dropdown-category">
+      <button
+        className="mobile-category-btn"
+        onClick={() => toggleCategory(category)}
+      >
+        {category}
+        <span className={`arrow ${openCategory === category ? "open" : ""}`} />
+      </button>
+
+      {openCategory === category && (
+        <ul className="mobile-dropdown-items">
+          {menuItems[category].map((item) => (
+            <li key={item.href}>
+              <Link href={item.href} className="mobile-dropdown-item">
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
+  ))}
+</ul>
+
 						</li>
 						<li className="nav-item ">
 							<a href="/services" className="nav-link fw-medium" onClick={() => handleAccordion(4)} role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>

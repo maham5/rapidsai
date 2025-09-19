@@ -2,6 +2,11 @@
 @charset "UTF-8";
 
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 
 /*===========
    Theme Name: Vatech - Technology Solutions & Business HTML Template
@@ -21706,8 +21711,10 @@ textarea {
   color:white
 }
 
-.mobile-category-btn:hover {
-  background: #f8f8f8;
+.mobile-category-btn:active {
+  background: #fafbec;
+  color:#0d1933;
+
 }
 
 .arrow {
@@ -21723,6 +21730,7 @@ textarea {
   list-style: none;
   padding: 0 16px 10px 16px;
   margin: 0;
+  color:#fafbec;
 }
 
 .mobile-dropdown-item {
@@ -21731,8 +21739,9 @@ textarea {
   color: #333;
   text-decoration: none;
   font-size: 14px;
+  color:#fafbec;
 }
 
 .mobile-dropdown-item:hover {
-  color: #4caf50;
+  color: #af2025;
 }

@@ -20,7 +20,7 @@ export default function Section1() {
 						</h1>
 						<p className="paragraph-base primary-50 desc-banner" data-aos="fade-up">Welcome to RapidsAI! We're a passionate team, transforming ideas into reality with our expertise in AI-based software development</p>
 						<div className="glow-border">
-  <button className="glow-button">Get started</button>
+ <Link href="/contact"> <button className="glow-button">Get started</button></Link> 
 </div>
 						<span className="mr-20 d-none d-sm-inline-block mb-3" />
 						
